@@ -3,25 +3,54 @@ require_once ('header.php');
 $furniture_id = $_GET['furniture_id'];
 if (!is_numeric($furniture_id)) exit();
 $furniture = get_furniture_by_id($furniture_id);
+
+$sht = "";
+if($furniture['numberOfGood'] == 11){
+    $sht = "штук";
+}else if($furniture['numberOfGood'] == 1){
+    $sht = "штука";
+} else if(in_array($furniture['numberOfGood'], [2,3,4])){
+    $sht = "штуки";
+}else if(in_array($furniture['numberOfGood'], [5,6,7,8,9,10])){
+    $sht = "штук";
+}else if($furniture['numberOfGood']%10==1){
+    $sht = "штука";
+}else if($furniture['numberOfGood']%10==2 && $furniture['numberOfGood']%10==3 && $furniture['numberOfGood']%10==4){
+    $sht = "штуки";
+}else{
+    $sht = "штук";
+}
 ?>
 
     <section class="good-section">
         <div class="good-container container">
                 <div class="good-body">
                     <div class="good-menu">
-                        <div class="good-__name">
+                        <div class="good-name">
                             <h1><?= $furniture['name']; ?></h1>
+
+                            <?php if(!$furniture['numberOfGood']) {
+                                echo " <p class='item-unavailable' style='padding: 0;'>На разі, товару нема на скаді. Після оформлення замовлення потрібно більше часу на доставку". "<?=".$furniture['numberOfGood']."?>!</p>";
+                            }else{
+                                echo " <p class='item-available' style='padding: 0;'>Встигни придбати, залишилось ".$furniture['numberOfGood']." ".$sht."!</p>";
+                            }
+                            ?>
                         </div>
                         <div class="good-menu__buttons">
                             <ul style="font-size: 33px;">
                                 <li><a href="#"><i class="fa-regular fa-heart fa-fw"></i></a></li>
-                                <li><a href="./makingorder.php"><i class="fa-solid fa-cart-shopping fa-fw"></i></a></li>
+                                <li><a href="./makingorder.php?furniture_id=<?=$furniture_id?>"><i class="fa-solid fa-cart-shopping fa-fw"></i></a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="good-body__top" id="slider-2">
                         <div class="good-swiper-container swiper" id="swiper-2">
+                            <!--                                ---->
+                            <div class="goodprice-background"></div>
+                            <p class="good-price"><i>₴<?=$furniture['price'];?></i></p>
+                            <!--                                ---->
                             <div class="good-swiper-wrapper swiper-wrapper">
+
                                 <div class="good-swiper__slide swiper-slide">
                                     <img src="<?= $furniture['img1']; ?>" alt="...">
                                 </div>

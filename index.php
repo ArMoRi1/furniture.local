@@ -26,114 +26,113 @@ include('header.php');
                 <div class="firstAndHalf-section__text"">
                     <h2 >Комфорт і затишок у Вашому домі</h2>
                 </div>
-                <div class="firstAndHalf-section__underline">
-                </div>
+                <div class="firstAndHalf-section__underline"></div>
             </div>
         </div>
     </section>
     <section class="second-section__wrapper">
-        <div class="second-cards-container container">
-                <div class="glassBox glassBox__first">
-                    <div class="glassBox__contentBox">
-                        <div class="glassBox__titleBox ">
-                            Спеціальні пропозиції
+                <div class="second-cards-container container">
+                    <article class="glassBox glassBox__first">
+                        <div class="glassBox__contentBox">
+                            <header class="glassBox__titleBox">
+                                <h2>Спеціальні пропозиції</h2>
+                            </header>
+                            <div class="glassBox__textBox">
+                                <p>Різноманітні дивани</p>
+                            </div>
                         </div>
-                        <div class="glassBox__textBox">
-                            Різноманітні дивани
+                        <footer class="glassBox__imgBox">
+                            <i class="fa-solid fa-couch"></i>
+                        </footer>
+                    </article>
+                    <article class="glassBox glassBox__second">
+                        <div class="glassBox__contentBox">
+                            <header class="glassBox__titleBox">
+                                <h2>Унікальні дизайни</h2>
+                            </header>
+                            <div class="glassBox__textBox">
+                                <p>Табуренки та Крісла</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="glassBox__imgBox">
-                        <i class="fa-solid fa-couch" ></i>
-                    </div>
+                        <footer class="glassBox__imgBox">
+                            <i class="fa-solid fa-chair"></i>
+                        </footer>
+                    </article>
+                    <article class="glassBox glassBox__third">
+                        <div class="glassBox__contentBox">
+                            <header class="glassBox__titleBox">
+                                <h2>Спеціальні пропозиції</h2>
+                            </header>
+                            <div class="glassBox__textBox">
+                                <p>Місця для сну</p>
+                            </div>
+                        </div>
+                        <footer class="glassBox__imgBox">
+                            <i class="fa-solid fa-bed"></i>
+                        </footer>
+                    </article>
                 </div>
-                <div class="glassBox glassBox__second">
-                    <div class="glassBox__contentBox">
-                        <div class="glassBox__titleBox">
-                            Унікальні дизайни
-                        </div>
-                        <div class="glassBox__textBox">
-                             Табуренки та Крісла
-                        </div>
-                    </div>
-                    <div class="glassBox__imgBox">
-                        <i class="fa-solid fa-chair"></i>
-                    </div>
-                </div>
-                <div class="glassBox  glassBox__third">
-                    <div class="glassBox__contentBox">
-                        <div class="glassBox__titleBox">
-                            Спеціальні пропозиції
-                        </div>
-                        <div class="glassBox__textBox">
-                            Місця для сну
-                        </div>
-                    </div>
-                    <div class="glassBox__imgBox">
-                        <i class="fa-solid fa-bed"></i>
-                    </div>
-                </div>
-        </div>
-    </section>
+            </section>
+
     <section class="third-section__wrapper">
-        <div class="third-section__container container">
-            <div class="third-section__body">
-                <div class="third-section__body-left">
-                    <div class="swiper image-slider swiper-container container" id="swiper1">
-                        <div class="image-slider__wrapper swiper-wrapper">
-                            <div class="image-slider__slide swiper-slide">
-                                <div class="image-slider__image swiper-slide">
-                                    <img src="../furniture.local/img/slider/1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="image-slider__slide swiper-slide">
-                                <div class="image-slider__image swiper-slide">
-                                    <img src="../furniture.local/img/slider/2.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="image-slider__slide swiper-slide">
-                                <div class="image-slider__image swiper-slide">
-                                    <img src="../furniture.local/img/slider/3.jpg" alt="">
-                                </div>
-                            </div><div class="image-slider__slide swiper-slide">
-                                <div class="image-slider__image swiper-slide">
-                                    <img src="../furniture.local/img/slider/4.jpg" alt="">
-                                </div>
-                            </div><div class="image-slider__slide swiper-slide">
-                                <div class="image-slider__image swiper-slide">
-                                    <img src="../furniture.local/img/slider/5.jpg" alt="">
-                                </div>
-                            </div>
+                <div class="third-section__container container">
+                    <div class="third-section__body">
+                        <div class="third-section__body-left">
+                            <div class="swiper image-slider swiper-container container" id="swiper1">
+                                <div class="image-slider__wrapper swiper-wrapper">
+                                    <div class="image-slider__slide swiper-slide">
+                                        <div class="image-slider__image swiper-slide">
+                                            <img src="../furniture.local/img/slider/1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="image-slider__slide swiper-slide">
+                                        <div class="image-slider__image swiper-slide">
+                                            <img src="../furniture.local/img/slider/2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="image-slider__slide swiper-slide">
+                                        <div class="image-slider__image swiper-slide">
+                                            <img src="../furniture.local/img/slider/3.jpg" alt="">
+                                        </div>
+                                    </div><div class="image-slider__slide swiper-slide">
+                                        <div class="image-slider__image swiper-slide">
+                                            <img src="../furniture.local/img/slider/4.jpg" alt="">
+                                        </div>
+                                    </div><div class="image-slider__slide swiper-slide">
+                                        <div class="image-slider__image swiper-slide">
+                                            <img src="../furniture.local/img/slider/5.jpg" alt="">
+                                        </div>
+                                    </div>
 
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
 
+                        <div class="third-section__body-right">
+                            <header class="third-section__title" style="text-align: center;">
+                                <h2>Ключ до Ідеального Інтер'єру – «Комфорт»®</h2>
+                            </header>
+                            <article class="third-section__content">
+                                <p>
+                                    Усі ці роки не пройшли просто так, на разі у фабрики «Комфорт»® є велика клієнтська база.
+                                    Мешканцям таких  міст як Львів, Тернопіль, Чернівці, та багатьом іншим вже давно відома висока якість меблів.
+                                </p>
+                                <div class="firstAndHalf-section__underline secondAndHalf-section__underline">
+                                </div>
+                                <p>
+                                    Фабрика меблів «Комфорт»® спеціалізується на виготовленні шаф купе, кухонних гарнітурів, прихожих, столів та інших корпусних меблів. Кожен виріб створюється згідно з дизайнерськими проектами і індивідуальними побажаннями наших клієнтів.
+                                </p>
+                                <div class="firstAndHalf-section__underline secondAndHalf-section__underline">
+                                </div>
+                                <p>
+                                    Протягом понад всіх років фабрика «Комфорт»® постійно вдосконалює свій досвід, надаючи найкращі рішення для вашого житла. Ми горді розраховуємо на успішну роботу з Вами.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="third-section__body-right">
-                    <div class="third-section__title">
-                        <h2 >Ключ до Ідеального Інтер'єру – «Комфорт»®</h2>
-                    </div>
-                    <div class="third-section__content">
-                        <p>
-                            Усі ці роки не пройшли просто так, на разі у фабрики «Комфорт»® є велика клієнтська база.
-                            Мешканцям таких  міст як Львів, Тернопіль, Чернівці, та багатьом іншим вже давно відома висока якість меблів.
-                        </p>
-                        <div class="firstAndHalf-section__underline secondAndHalf-section__underline">
-                        </div>
-                        <p>
-                            Фабрика меблів «Комфорт»® спеціалізується на виготовленні шаф купе, кухонних гарнітурів, прихожих, столів та інших корпусних меблів. Кожен виріб створюється згідно з дизайнерськими проектами і індивідуальними побажаннями наших клієнтів.
-                        </p>
-                        <div class="firstAndHalf-section__underline secondAndHalf-section__underline">
-                        </div>
-                        <p>
-                            Протягом понад всіх років фабрика «Комфорт»® постійно вдосконалює свій досвід, надаючи найкращі рішення для вашого житла. Ми горді розраховуємо на успішну роботу з Вами.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
     <section class="fourth-section__wrapper">
         <div class="fourth-section__container container">
             <div class="fourth-section__body">

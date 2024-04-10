@@ -44,6 +44,13 @@ $total_pages = ceil(countRowsByCategory($type) / $limit);
                         <li class="item-container">
                             <a class="item-wrapper" href="furnitureInfo.php?furniture_id=<?= $furniture['id'] ?>">
                                 <div class="item-body">
+
+                                    <?php if(!$furniture['numberOfGood']) {
+                                        echo "<p class='item-unavailable'>".'Немає готових товарів. Потрібен час для виготовлення'."</p>";
+                                    }else{
+                                        echo "<p class='item-available'>".'Є в наявності :)'."</p>";
+                                    }
+                                    ?>
                                     <div class="item-image">
                                         <img src="<?= $furniture['img1'] ?>" alt="...">
                                     </div>

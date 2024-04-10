@@ -118,7 +118,7 @@ scrollToTopBtn.addEventListener("click", function (e) {
     });
 });
 
-// Переключення табів
+// Переключення табів 1
 document.querySelectorAll('.tabs-triggers__item').forEach((item) =>
 item.addEventListener('click',function(e){
     e.preventDefault();
@@ -135,8 +135,42 @@ item.addEventListener('click',function(e){
 }));
 document.querySelector('.tabs-triggers__item').click();
 
+і
 
-// Пагінація
+function gearFunction() {
+    // Перемикання класу show для меню
+    document.getElementById("myDropdown").classList.toggle("show");
+
+    // Перемикання між класами fa-gear-clicked та fa-gear-unclicked
+    var gearIcon = document.getElementById("fa-gear");
+    if (gearIcon.classList.contains("fa-gear-unclicked")) {
+        gearIcon.classList.remove("fa-gear-unclicked");
+        gearIcon.classList.add("fa-gear-clicked");
+    } else {
+        gearIcon.classList.remove("fa-gear-clicked");
+        gearIcon.classList.add("fa-gear-unclicked");
+    }
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+
+                // При закритті меню видалити клас fa-gear-clicked
+                var gearIcon = document.getElementById("fa-gear");
+                gearIcon.classList.remove("fa-gear-clicked");
+                gearIcon.classList.add("fa-gear-unclicked");
+            }
+        }
+    }
+}
+
+
 
 
 

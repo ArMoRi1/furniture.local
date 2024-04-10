@@ -1,7 +1,7 @@
 <?php
     include ('./header.php');
 ?>
-<div class="thx-container">
+<div style="min-height: 100vh;" class="thx-container">
     <div class="thx-body">
         <h3>Ваше замовлення успішно додано. Чекайте зв'язку від менеджера<3</h3>
         <div class="button-back">
@@ -12,3 +12,6 @@
 
     </div>
 </div>
+<?php
+    include ('footer.php');
+?>

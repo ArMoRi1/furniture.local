@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ("include/config.php");
 include ("include/function.php");
 ?>
@@ -58,6 +59,31 @@ include ("include/function.php");
                                 </div>
                             </form>
                         </li>
+                        <?php
+                            if(empty($_SESSION['user'])):
+                        ?>
+                        <li class="userlogin-container">
+                            <div class="btn-group mr-2 " role="group" aria-label="Second group">
+                                <a class="header__link userlogin" href = "login/login.php" type="button" class="btn btn-light">Увійти</a>
+                            </div>
+                        </li>
+                        <?php endif; if(!empty($_SESSION['user'])):?>
+                        <li class="usergear">
+                            <div class="dropdown">
+                                <button onclick="gearFunction()" class="dropbtn"><i  id="fa-gear" class="fa-solid fa-gear fa-gear-unclicked"></i></button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a class="username" href="userProfile.php"><i class="fa-regular fa-user"><span><?php echo $_SESSION['user'];?></span></i></a>
+                                            <?php
+                                            if('admin' === GetRoleUsingEmail($_SESSION['email'])){
+                                               echo  '<a class="useradmin" href="admin/index.php"><i class="fa-solid fa-lock"><span>Адмін-панель</span></i></a>';
+                                            }
+                                            ?>
+<!--                                    <a class="useradmin" href="#"><i class="fa-solid fa-lock"><span>Адмін-панель</span></i></a>-->
+                                    <a class="userexit" href="login/exit.php"><i class="fa-solid fa-arrow-right-from-bracket"><span>Вихід</span></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <?php endif;?>
                     </ul>
                 </nav>
             </div>
@@ -65,4 +91,3 @@ include ("include/function.php");
     </header>
     <a href="#" class="scroll-to-top">&uarr;</a>
 
-</body>

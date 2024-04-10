@@ -12,10 +12,8 @@ $total_pages = ceil(countRows($type) / $limit);
 if(isset($_POST['submitKeywords'])){
     $search = trim(strip_tags(stripcslashes(htmlspecialchars($_POST['keywords']))));
     $sql = trim("SELECT * FROM furniture WHERE (`name` LIKE '%".trim(strtolower($search))."%') OR (`img1` LIKE '%".trim(strtolower($search))."%') OR (`img2` LIKE '%".trim(strtolower($search))."%') OR (`img3` LIKE '%".trim(strtolower($search))."%') ");
-    echo $sql;
     $query = mysqli_query($conn, $sql);
     $furniture = mysqli_fetch_assoc($query);
-
 }
 ?>
 
