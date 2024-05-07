@@ -24,7 +24,7 @@ html, body {
 .container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0px 20px;
+    padding: 0 20px;
 }
 a{
     cursor: pointer;
@@ -91,7 +91,7 @@ a{
     /*display: none;*/
     position:fixed;
     width: 100%;
-    top: 0px;
+    top: 0;
     left: 0;
     z-index: 10;
     transition: top 0.3s, background-color 0.3s;
@@ -105,7 +105,7 @@ a{
     width: 100%;
     height: 100%;
     background: #fff;
-    box-shadow: 0px 11px 20px -20px rgba(0,0,0,0.45);
+    box-shadow: 0 11px 20px -20px rgba(0,0,0,0.45);
 }
 
 .header__body {
@@ -156,6 +156,7 @@ a{
 .header__list li a,
 .header__list .username{
     height: 100%;
+    text-align: center;
 }
 
 .header__link {
@@ -171,7 +172,7 @@ a{
 #header-options{
     /*height: 800px;*/
     display:none;
-    height: 0px;
+    height: 0;
     position:absolute;
     background-color: #f2f2f2;
     width: 100%;
@@ -179,7 +180,7 @@ a{
     left: 0;
     border:none;
     font-size: 18px;
-    box-shadow: 0px 11px 20px -20px rgba(0,0,0,0.45);
+    box-shadow: 0 11px 20px -20px rgba(0,0,0,0.45);
     border-bottom: 2px solid black;
     transition: 0.3s;
 }
@@ -264,11 +265,11 @@ a{
     position: absolute;
     top:-150px;
     overflow: auto;
-    right: 0px;
+    right: 0;
     background-color: #f1f1f1;
     min-width: 230px;
     max-height: 400px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
     transition: all 0.75s ease 0s;
 
@@ -357,7 +358,7 @@ button[type="submit"]:hover {
     background-color: #418598;
 
 }
-@media (max-width:767px){
+@media (max-width:880px){
     body.lock{
         overflow: hidden;
     }
@@ -370,18 +371,24 @@ button[type="submit"]:hover {
     .header__burger{
         display: block;
         position: relative;
-        z-index: 3;
+
         width: 30px;
         height: 20px;
     }
     .header__burger:before,
-    .header__burger::after{
+    .header__burger:after{
         transition: all 0.3s ease 0s;
         content: '';
         background-color: #000000;
         width: 100%;
         height: 2px;
         position: absolute;
+        z-index: 30;
+    }
+    .header__logo,
+    .header__burger,
+    .header:before{
+        z-index: 30;
     }
     .header__burger span{
         transition: all 0.3s ease 0s;
@@ -397,7 +404,7 @@ button[type="submit"]:hover {
         height: 2.5px;
     }
     .header__burger:after{
-        bottom:0px;
+        bottom:0;
         height: 2.5px;
     }
 
@@ -444,12 +451,10 @@ button[type="submit"]:hover {
 }
 .first-section__container{
     background: #000 center/cover url('../img/2.jpg') no-repeat;
-
     min-height: 100vh;
     display: flex;
     margin: 0 auto;
-
-    padding: 0 20px;
+    padding: 50px 20px;
 }
 .first-section__body{
     flex: 1 1 auto;
@@ -485,7 +490,6 @@ button[type="submit"]:hover {
     font-size: 55px;
     transform-origin: 50% 50%;
     transform: translate(0px, 0px);
-    font-weight: 500;
 }
 .first-section__text{
     color: #fff;
@@ -495,7 +499,6 @@ button[type="submit"]:hover {
     transform: translate(0px, 0px);
     font-weight: 300;
     margin: 50px 0 20px 0;
-    margin: 50px 0 20px 0;
     }
 .first-section__link {
     text-decoration: none;
@@ -504,7 +507,7 @@ button[type="submit"]:hover {
     border-radius: 10rem;
     color: #fff;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 13px;
     line-height:30px;
     margin-top:25px;
     transition: all .3s;
@@ -528,12 +531,11 @@ button[type="submit"]:hover {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%;
+    width: 0;
     height: 100%;
     background-color: #fca100;
     transition: all .3s;
     border-radius: 10rem;
-    z-index: -1;
 }
 .first-section__link:hover {
     color: #fff;
@@ -543,6 +545,38 @@ button[type="submit"]:hover {
 .first-section__link:hover:before {
     width: 100%;
 }
+
+@media (max-width:880px)
+{
+    .first-section__container{
+        padding: 80px 20px 20px 20px;
+    }
+    .title-wrap,
+    .text-wrap,
+    .link-wrap{
+        text-align: center;
+
+    }
+    .first-section__title,
+    .first-section__text,
+    .first-section__link{
+        max-width: none;
+        margin: 0;
+    }
+    .first-section__title{
+        font-size: 45px;
+        padding-bottom: 30px;
+    }
+    .first-section__text{
+        padding-bottom: 20px;
+    }
+    .first-section__link {
+        padding: .5rem 1rem;
+        border-radius: 10rem;
+
+    }
+}
+
 /*---------- FirstAndHalf section ----------*/
 
 .firstAndHalf-section__wrapper{
@@ -561,13 +595,15 @@ button[type="submit"]:hover {
 .firstAndHalf-section__title{
     color:#464646;
     font-size: 18px;
-    margin-bottom: 2px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .firstAndHalf-section__text{
     font-size: 35px;
     line-height: 40px;
     margin-bottom: 30px;
+    text-align: center;
 }
 .firstAndHalf-section__underline{
     width: 200px;
@@ -575,6 +611,17 @@ button[type="submit"]:hover {
     border-bottom: 1px #000 solid;
 
 }
+@media (max-width:880px){
+    .firstAndHalf-section__title{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .firstAndHalf-section__text{
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+}
+
 /*---------- Second section ----------*/
 
 .second-section__wrapper{
@@ -596,7 +643,7 @@ button[type="submit"]:hover {
 }
 .glassBox__first{
     background-color:#70afc1;
-
+    margin-right: 15px;
 }
 .glassBox__first:hover{
     background-color: rgb(65, 133, 152);
@@ -604,12 +651,12 @@ button[type="submit"]:hover {
 }
 .glassBox__second{
     background-color: #d4c0a7;
+    margin-right: 15px;
 }
 .glassBox__second:hover{
     background-color: #b08b5d;
     transition: 0.3s;
 }
-
 .glassBox__third{
     background-color: #b7c5c5;
 }
@@ -618,51 +665,136 @@ button[type="submit"]:hover {
     transition: 0.3s;
 }
 .glassBox {
+    display: flex;
+    padding: 15px;
     color:#fff;
     width: 100%;
     height: 200px;
     max-width: 400px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
-    padding: 15px;
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.2);
     position: relative;
-    display: flex;
+
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
     cursor: pointer;
 }
 
-.glassBox__contentBox{}
+.glassBox__contentBox{
+    padding-right: 8px;
+}
+
 .glassBox__titleBox{
     font-size: 16px;
     border-bottom:1px solid #fff;
     padding: 0 0 7px 0;
 }
-
-
 .glassBox__textBox{
     padding: 7px 0 0 0;
 }
-
 .glassBox__title {
     text-align: center;
     margin-top: 15px;
     color: #000;
     font-weight: 400;
 }
-
 .glassBox__content {
-
 }
-
 .glassBox:hover .glassBox__imgBox {
     transform: translateX(15px);
 }
 .glassBox__imgBox i{
     font-size: 80px;
 }
+@media (max-width:880px){
+    .second-cards-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .glassBox{
+        margin: 0 0 20px 0;
+        max-width: 80%;
 
+    }
+    .glassBox__titleBox{
+        font-size: 18px;
+        border-bottom:1px solid #fff;
+        padding: 0 0 7px 0;
+    }
+
+    .glassBox__textBox{
+        font-size: 22px;
+        padding: 7px 0 0 0;
+    }
+
+    .glassBox__title {
+        text-align: center;
+        margin-top: 15px;
+        color: #000;
+        font-weight: 400;
+    }
+    .glassBox__imgBox i{
+        font-size: 80px;
+    }
+}
+@media (max-width: 517px){
+    .first-section__title {
+        font-size: 30px;
+
+    }
+    .first-section__text{
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+    .first-section__link {
+        font-size: 14px;
+        padding: .5rem 1rem;
+    }
+    .firstAndHalf-section__wrapper{
+        margin: 50px 0;
+    }
+    .glassBox{
+        height: 150px;
+    }
+    .glassBox__titleBox{
+
+        font-size: 15px;
+        border-bottom:1px solid #fff;
+        padding: 0 0 7px 0;
+    }
+
+    .glassBox__textBox{
+        font-size: 18px;
+        padding: 7px 0 0 0;
+    }
+
+    .glassBox__imgBox i{
+        font-size: 70px;
+    }
+}
+@media (max-width: 417px){
+    .glassBox{
+        height: 140px;
+
+    }
+    .glassBox__titleBox{
+
+        font-size: 14px;
+        border-bottom:1px solid #fff;
+        padding: 0 0 7px 0;
+    }
+
+    .glassBox__textBox{
+        font-size: 16px;
+        padding: 7px 0 0 0;
+    }
+
+    .glassBox__imgBox i{
+        font-size: 55px;
+    }
+}
 /*---------- Third section ----------*/
 
 
@@ -672,13 +804,13 @@ button[type="submit"]:hover {
     align-items: center;
     /*min-height: 100vh;*/
     margin-bottom: 110px;
+    max-width: 1440px;
 }
 .third-section__container{
     padding:0;
 }
 .third-section__body{
     display: grid;
-    grid-template-columns: 50% 50px;
     grid-template-rows: 700px;
     grid-template-columns: repeat(auto-fill, 50%);
 
@@ -733,6 +865,31 @@ button[type="submit"]:hover {
     width: 100%;
 }
 
+@media (max-width: 1000px) {
+    .third-section__body{
+        display: grid;
+        grid-template-columns: minmax(100px, 85%);
+        grid-template-rows: minmax(100px, 85%);
+        justify-content: center; /* Вирівнювання по горизонталі */
+        align-content: center; /* Вирівнювання по вертикалі */
+    }
+
+}
+@media (min-width: 1000px) and (max-width: 1440px){
+    .swiper{
+        max-height: 70%;
+        max-width: 70%;
+        object-fit: contain;
+    }
+    .third-section__body{
+        display: grid;
+        grid-template-columns: minmax(100px, 85%);
+        grid-template-rows: minmax(100px, 85%);
+        justify-content: center; /* Вирівнювання по горизонталі */
+        align-content: center; /* Вирівнювання по вертикалі */
+    }
+
+}
 /*---------- Fourth section ----------*/
 
 .fourth-section__wrapper{
@@ -1567,7 +1724,6 @@ nav.navigation{
     font-family: "Roboto";
     box-sizing: border-box;
     font-size: 14px;
-    font-wieght: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: 0.2s linear;

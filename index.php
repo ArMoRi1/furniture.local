@@ -9,7 +9,9 @@ include('header.php');
                     <h2 class="first-section__title">Краса в приміщенні</h2>
                 </div>
                 <div class="text-wrap">
-                    <p class="first-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque, eius eum in ipsam natus officiis rem. Earum error, est, eum illum iusto maxime odio placeat quas quia ratione velit!</p>
+                    <p class="first-section__text">
+                        У цьому магазині меблів ви знайдете великий вибір стильних і якісних товарів для вашого будинку. Привітний персонал завжди готовий надати професійну консультацію щодо вибору меблів, що відповідають вашим потребам та бюджету. Швидка доставка та зручні умови оплати зроблять ваше шопінг-досвід приємним та безпроблемним.
+                    </p>
                 </div>
                 <div class="link-wrap">
                     <a href="#" class="first-section__link">Дізнатись більше →</a>
@@ -18,7 +20,7 @@ include('header.php');
         </div>
     </section>
     <section class="firstAndHalf-section__wrapper">
-        <div class="firstAndHalf-section__container">
+        <div class="firstAndHalf-section__container container">
             <div class="firstAndHalf-section__body">
                 <div class="firstAndHalf-section__title">
                     <p >Нашим завданням є забезпечити</p>
@@ -28,48 +30,47 @@ include('header.php');
                 </div>
                 <div class="firstAndHalf-section__underline"></div>
             </div>
-        </div>
     </section>
     <section class="second-section__wrapper">
                 <div class="second-cards-container container">
                     <article class="glassBox glassBox__first">
                         <div class="glassBox__contentBox">
-                            <header class="glassBox__titleBox">
+                            <div class="glassBox__titleBox">
                                 <h2>Спеціальні пропозиції</h2>
-                            </header>
+                            </div>
                             <div class="glassBox__textBox">
                                 <p>Різноманітні дивани</p>
                             </div>
                         </div>
-                        <footer class="glassBox__imgBox">
+                        <div class="glassBox__imgBox">
                             <i class="fa-solid fa-couch"></i>
-                        </footer>
+                        </div>
                     </article>
                     <article class="glassBox glassBox__second">
                         <div class="glassBox__contentBox">
-                            <header class="glassBox__titleBox">
+                            <div class="glassBox__titleBox">
                                 <h2>Унікальні дизайни</h2>
-                            </header>
+                            </div>
                             <div class="glassBox__textBox">
                                 <p>Табуренки та Крісла</p>
                             </div>
                         </div>
-                        <footer class="glassBox__imgBox">
+                        <div class="glassBox__imgBox">
                             <i class="fa-solid fa-chair"></i>
-                        </footer>
+                        </div>
                     </article>
                     <article class="glassBox glassBox__third">
                         <div class="glassBox__contentBox">
-                            <header class="glassBox__titleBox">
+                            <div class="glassBox__titleBox">
                                 <h2>Спеціальні пропозиції</h2>
-                            </header>
+                            </div>
                             <div class="glassBox__textBox">
                                 <p>Місця для сну</p>
                             </div>
                         </div>
-                        <footer class="glassBox__imgBox">
+                        <div class="glassBox__imgBox">
                             <i class="fa-solid fa-bed"></i>
-                        </footer>
+                        </div>
                     </article>
                 </div>
             </section>
