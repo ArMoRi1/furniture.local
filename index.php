@@ -137,20 +137,20 @@ include('header.php');
     <section class="fourth-section__wrapper">
         <div class="fourth-section__container container">
             <div class="fourth-section__body">
-                <div class="body-item">
+                <div class="body-item body-item__first">
                     <div class="item-img">
                         <i class="fa-regular fa-file-lines"></i>
                     </div>
                     <div class="item-content">
                         <div class="item-title">
-                            <p>Гарантія протягом 60 місяців</p>
+                            <p>Гарантія на 60 місяців.</p>
                         </div>
                         <div class="item-text">
-                            <p>Оформляємо при Вас. Радимо не загубити.</p>
+                            <p>Оформляємо при Вас.</p>
                         </div>
                     </div>
                 </div>
-                <div class="body-item">
+                <div class="body-item body-item__second">
                     <div class="item-img">
                         <i class="fa-solid fa-truck-ramp-box"></i>
                     </div>
@@ -159,11 +159,11 @@ include('header.php');
                             <p>Безкоштовна доставка</p>
                         </div>
                         <div class="item-text">
-                            <p>Доставка у будь-яку частину України.</p>
+                            <p>У будь-яку частину України.</p>
                         </div>
                     </div>
                 </div>
-                <div class="body-item">
+                <div class="body-item body-item__third">
                     <div class="item-img">
                         <i class="fa-regular fa-comments"></i>
                     </div>

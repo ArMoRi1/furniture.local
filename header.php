@@ -44,7 +44,6 @@ include ("include/function.php");
                                 <li><a href="./marketplace.php?page=0&type=1">Кутові дивани</a></li>
                                 <li><a href="./marketplace.php?page=0&type=2">Прямі дивани</a></li>
                                 <li><a href="./marketplace.php?page=0&type=3">Ліжка</a></li>
-<!--                                <li><a href="./marketplace.php?page=0&type=4">Крісла/Табурети</a></li>-->
                             </ul>
                         </li>
                         <li><a href="./aboutus.php" class="header__link">Про нас</a></li>
@@ -52,7 +51,7 @@ include ("include/function.php");
                         <li class="search-wrapper">
                             <form action="search.php" method="post">
                                 <div class="search-container">
-                                    <input  type="text"   name="keywords" placeholder="Пошук..." />
+                                    <input  type="text"   name="keywords" placeholder="Пошук..." >
                                     <button type="submit" name="submitKeywords">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </button>
@@ -64,7 +63,7 @@ include ("include/function.php");
                         ?>
                         <li class="userlogin-container">
                             <div class="btn-group mr-2 " role="group" aria-label="Second group">
-                                <a class="header__link userlogin" href = "login/login.php" type="button" class="btn btn-light">Увійти</a>
+                                <a class="header__link userlogin btn btn-light" href = "login/login.php" type="button">Увійти</a>
                             </div>
                         </li>
                         <?php endif; if(!empty($_SESSION['user'])):?>

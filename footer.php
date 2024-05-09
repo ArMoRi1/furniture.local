@@ -26,12 +26,12 @@
             </div>
             <div class="footer__list footer__list-3">
                 <span class="footer__title">
-                    Телефони
+                    Контакти
                 </span>
 
                     <p class="footer__item"><a href="#" class="item__link">+38 (097) 377 28 28</a></p>
                     <p class="footer__item"><a href="#" class="item__link">+38 (050) 377 28 29</a></p>
-                <ul>
+                <ul class="footer__item">
                     <li><a href="https://www.facebook.com/fmkomfort"><i class="fa-brands fa-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/fm_komfort/"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="https://telegram.me/fm_komfort"><i class="fa-brands fa-telegram"></i></a></li>

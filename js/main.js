@@ -104,9 +104,9 @@ var scrollToTopBtn = document.querySelector(".scroll-to-top");
 
 window.addEventListener("scroll", function () {
     if (window.pageYOffset > 100) {
-        scrollToTopBtn.classList.add("show");
+        scrollToTopBtn.classList.add("showw");
     } else {
-        scrollToTopBtn.classList.remove("show");
+        scrollToTopBtn.classList.remove("showw");
     }
 });
 
