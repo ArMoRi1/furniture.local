@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
     menuButton.addEventListener("click", function () {
         if (!isMenuOpen) {
             menuOptions.style.display = "block";
-            menuOptions.style.height = "160px";
+            menuOptions.style.height = "120px";
         } else {
             menuOptions.style.display = "none";
-            menuOptions.style.height = "160px";
+            menuOptions.style.height = "120px";
         }
         isMenuOpen = !isMenuOpen;
     });
