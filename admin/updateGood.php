@@ -12,6 +12,7 @@ $bedsquare = mysqli_real_escape_string($conn, $_POST['bedsquare']);
 $category = mysqli_real_escape_string($conn, $_POST['category']);
 $content = mysqli_real_escape_string($conn, $_POST['content']);
 $price = mysqli_real_escape_string($conn, $_POST['price']);
+$numberOfGood = mysqli_real_escape_string($conn, $_POST['numberOfGood']);
 
 $img1db = getIMGFromDatabase('img1',$id);
 $img2db = getIMGFromDatabase('img2',$id);
@@ -54,7 +55,8 @@ $query = "UPDATE `furniture` SET
             `bedsquare` = '$bedsquare',
             `category` = '$category',
             `content` = '$content',
-            `price` = '$price'
+            `price` = '$price',
+            `numberOfGood` = '$numberOfGood'
           WHERE `furniture`.`id` =".$id;
 
 if (mysqli_query($conn, $query)) {

@@ -2,7 +2,7 @@
 session_start();
 include('../include/config.php');
 include('../include/function.php');
-if('admin' !== GetRoleUsingEmail($_SESSION['email'])){
+if('1' !== GetRoleUsingEmail($_SESSION['email'])){
     header('location: ../login/login.php');
 }
 
@@ -114,63 +114,65 @@ if (!$conn) {
             </div>
             <div class="tabs__content">
                 <div id="tab-goods" class="tabs__content__item tabs__content__item--active col">
-
-                <div>
-                    <a href="add-new.php" class="btn btn-success">Додати новину</a>
-                </div>
-                <table class="table">
-                    <thead class="thead-light">
-                    <tr>
-                        <th scope="col">№</th>
-                        <th scope="col">Назва меблів</th>
-                        <th scope="col">Редагування</th>
-                        <th scope="col">Видалення</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                    $sql = "SELECT * FROM furniture";
-                    $result = mysqli_query($conn, $sql);
-                    foreach ($result as $post):
-                        ?>
-
+                    <div>
+                        <a href="addGood.php" class="btn btn-success">Додати меблі</a>
+                    </div>
+                    <table class="table">
+                        <thead class="thead-light">
                         <tr>
-                            <th scope="row"><?=$post['id']?></th>
-                            <td><?=$post['name']?></td>
-                            <td><a href="edit-new.php?post_id=<?=$post['id']?>" class="btn btn-secondary">Редагувати</a></td>
-                            <td><a href="delete.php?post_id=<?=$post['id'];?>" class="btn btn-danger">Видалити</a></td>
+                            <th scope="col">№</th>
+                            <th scope="col">Назва меблів</th>
+                            <th scope="col">Редагування</th>
+                            <th scope="col">Видалення</th>
                         </tr>
-
-                    <?php endforeach;?>
-                    </tbody>
-                </table>
-            </div>
-                <div id="tab-users" class="tabs__content__item col">
-                <table class="table">
-                    <thead class="thead-light">
-                    <tr>
-                        <th scope="col">№</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Редагування</th>
-                        <th scope="col">Видалення</th>
-                    </tr>
-                    </thead>
-                    <?php
-                    $sql = "SELECT * FROM users";
-                    $result = mysqli_query($conn, $sql);
-                    foreach ($result as $post):
-                        ?>
+                        </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row"><?=$post['id']?></th>
-                            <td><?=$post['email']?></td>
-                            <td><a href="edit-new.php?post_id=<?=$post['id']?>" class="btn btn-secondary">Редагувати</a></td>
-                            <td><a href="delete.php?post_id=<?=$post['id'];?>" class="btn btn-danger">Видалити</a></td>
-                        </tr>
+                        <?php
+                        $sql = "SELECT * FROM furniture";
+                        $result = mysqli_query($conn, $sql);
+                        foreach ($result as $post):
+                            ?>
+
+                            <tr>
+                                <th scope="row"><?=$post['id']?></th>
+                                <td><?=$post['name']?></td>
+                                <td><a href="editGood.php?post_id=<?=$post['id']?>" class="btn btn-secondary">Редагувати</a></td>
+                                <td><a href="deleteGood.php?post_id=<?=$post['id'];?>" class="btn btn-danger">Видалити</a></td>
+                            </tr>
+
+                        <?php endforeach;?>
                         </tbody>
-                    <?php endforeach;?>
-                </table>
-            </div>
+                    </table>
+                </div>
+                <div id="tab-users" class="tabs__content__item col">
+                    <div>
+                        <a href="./usersOperations/addUser.php" class="btn btn-success">Додати користувача</a>
+                    </div>
+                    <table class="table">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">№</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Редагування</th>
+                            <th scope="col">Видалення</th>
+                        </tr>
+                        </thead>
+                        <?php
+                        $sql = "SELECT * FROM users";
+                        $result = mysqli_query($conn, $sql);
+                        foreach ($result as $post):
+                            ?>
+                            <tbody>
+                            <tr>
+                                <th scope="row"><?=$post['id']?></th>
+                                <td><?=$post['email']?></td>
+                                <td><a href="./usersOperations/editUser.php?post_id=<?=$post['id']?>" class="btn btn-secondary">Редагувати</a></td>
+                                <td><a href="./usersOperations/deleteUser.php?post_id=<?=$post['id'];?>" class="btn btn-danger">Видалити</a></td>
+                            </tr>
+                            </tbody>
+                        <?php endforeach;?>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

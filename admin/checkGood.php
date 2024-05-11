@@ -11,6 +11,7 @@ $bedsquare = mysqli_real_escape_string($conn, $_POST['bedsquare']);
 $category = mysqli_real_escape_string($conn, $_POST['category']);
 $content = mysqli_real_escape_string($conn, $_POST['content']);
 $price = mysqli_real_escape_string($conn, $_POST['price']);
+$numberOfGood = mysqli_real_escape_string($conn, $_POST['numberOfGood']);
 if($_FILES['img1']) {
     $img1 = savingIMGtoDatabase($_FILES['img1'], $category, $name, 1);
 }
@@ -24,8 +25,8 @@ if($_FILES['video']){
     $video = savingIMGtoDatabase($_FILES['video'], $category, $name, 4);
 }
 
-$query = "INSERT INTO `furniture` (`id`, `name`, `img1`, `img2`, `img3`, `video`, `size`, `karkass`, `filling`, `bedsquare`, `category`, `content`, `price`) VALUES
-                                  (NULL, '$name', '$img1', '$img2','$img3', '$video', '$size', '$karkass', '$filling', '$bedsquare', '$category', '$content','$price')";
+$query = "INSERT INTO `furniture` (`id`, `name`, `img1`, `img2`, `img3`, `video`, `size`, `karkass`, `filling`, `bedsquare`, `category`, `content`, `price`, `numberOfGood`) VALUES
+                                  (NULL, '$name', '$img1', '$img2','$img3', '$video', '$size', '$karkass', '$filling', '$bedsquare', '$category', '$content','$price', '$numberOfGood')";
 if (mysqli_query($conn, $query)) {
    header('Location: index.php');
     exit();

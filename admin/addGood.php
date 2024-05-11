@@ -3,7 +3,7 @@ session_start();
 include('../include/config.php');
 include('../include/function.php');
 
-if('admin' !== GetRoleUsingEmail($_SESSION['email'])){
+if('1' !== GetRoleUsingEmail($_SESSION['email'])){
     header('location: ../login/login.php');
 }
 ?>
@@ -31,7 +31,7 @@ if('admin' !== GetRoleUsingEmail($_SESSION['email'])){
 <div class="container">
     <div class="col-12">
 
-        <form action="check-new.php" method="post" enctype="multipart/form-data" style="text-align: left">
+        <form action="checkGood.php" method="post" enctype="multipart/form-data" style="text-align: left">
             <div class="col">
                 <h3>Додання нової новини</h3>
             </div>
@@ -85,7 +85,11 @@ if('admin' !== GetRoleUsingEmail($_SESSION['email'])){
                 <input name="category" type="text" class="form-control"
                        id="exampleFormControlInput1" required>
             </div>
-
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Вкажіть кількість</span></label>
+                <input name="numberOfGood" type="text" class="form-control"
+                       id="exampleFormControlInput1">
+            </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Вкажіть опис меблів<span style="color:red;">*</span></label>
                 <textarea name="content" class="form-control"

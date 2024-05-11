@@ -1814,6 +1814,11 @@ th,td {
     margin: 0 0 22px 0;
 }
 
+@media (max-width: 700px){
+    .marketplace-cards-container{
+        grid-template-columns: 1fr;
+    }
+}
 /*---------- Pagination ----------*/
 nav.navigation{
     display: block;
@@ -2177,24 +2182,27 @@ orderForm select{
 }
 
 @media (max-width: 1000px){
+    h1{
+
+    }
     p{
-        font-size: 20px;
+        font-size: 20px!important;
     }
 }
 @media (max-width: 517px){
     h2{
-        font-size: 22px;
+        font-size: 22px!important;
     }
     p{
-        font-size: 18px;
+        font-size: 18px!important;
     }
 }
 @media (max-width: 417px){
     h2{
-        font-size: 20px;
+        font-size: 20px!important;
     }
     p{
-        font-size: 16px;
+        font-size: 16px!important;
     }
 }
 /*---------userProfileEdit---------*/

@@ -47,7 +47,7 @@ if (!$conn) {
             <div class="col">
                 <h3>Редагування інформації</h3>
             </div>
-            <form action="update-new.php" method="post"
+            <form action="updateUser.php" method="post"
                   enctype="multipart/form-data" style="text-align: left;">
                 <input type="hidden" class="form-control" name="id"
                        value="<?=$post['id']?>" required>
@@ -97,6 +97,11 @@ if (!$conn) {
                     <label for="exampleFormControlFile1">Змінити тип меблів</label>
                     <input name="category" type="text" class="form-control" id="exampleFormControlFile1"
                            value="<?=$post['category']?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Вкажіть кількість</label>
+                    <input name="numberOfGood" type="text" class="form-control" id="exampleFormControlInput1"
+                           value="<?=$post['numberOfGood']?>">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Відредагуйте текст опису меблів</label>

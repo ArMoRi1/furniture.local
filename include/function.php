@@ -15,6 +15,13 @@ function get_furniture() {
     $furniture = mysqli_fetch_all($result, MYSQLI_ASSOC);
     return $furniture;
 }
+function get_rolees(){
+    global $conn;
+    $sql = 'SELECT * FROM rolee';
+    $result = mysqli_query($conn, $sql);
+    $rolees = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $rolees;
+}
 function get_furniture_for_plagins($table, $limit, $offset){
     global $conn;
     $sql = "SELECT * FROM $table LIMIT $limit OFFSET $offset";
@@ -118,7 +125,7 @@ function GetRoleUsingEmail($email) {
     // Перевірка на помилку підготовленого запиту
     if ($stmt) {
         // Прив'язка параметру та встановлення значення
-        mysqli_stmt_bind_param($stmt, "s", $email);
+        mysqli_stmt_bind_param($stmt, "i", $email);
 
         // Виконання запиту
         mysqli_stmt_execute($stmt);
