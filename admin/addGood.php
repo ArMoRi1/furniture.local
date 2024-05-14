@@ -14,7 +14,7 @@ if('1' !== GetRoleUsingEmail($_SESSION['email'])){
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0>
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Додавання нової новини</title>
+    <title>Додавання меблів</title>
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -33,7 +33,7 @@ if('1' !== GetRoleUsingEmail($_SESSION['email'])){
 
         <form action="checkGood.php" method="post" enctype="multipart/form-data" style="text-align: left">
             <div class="col">
-                <h3>Додання нової новини</h3>
+                <h3>Додавання меблів</h3>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Вкажіть назву меблів<span style="color:red;">*</span></label>

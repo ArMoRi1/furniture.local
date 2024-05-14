@@ -31,7 +31,7 @@ if('1' !== GetRoleUsingEmail($_SESSION['email'])){
 <div class="container">
     <div class="col-12">
 
-        <form action="checkUser.php" method="post" enctype="multipart/form-data" style="text-align: left">
+        <form action="../../login/add-user.php" method="post" enctype="multipart/form-data" style="text-align: left">
             <div class="col">
                 <h3>Додати Користувача</h3>
             </div>
@@ -64,7 +64,7 @@ if('1' !== GetRoleUsingEmail($_SESSION['email'])){
                     foreach($rolees as $rolee):
 
                         ?>
-                        <option value="<?php echo $rolee['roleeName']; ?>"><?php echo $rolee['roleeName']; ?></option>
+                        <option value="<?php echo $rolee['id']; ?>"><?php echo $rolee['roleeName']; ?></option>
                     <?php endforeach;?>
                 </select>
 

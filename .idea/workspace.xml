@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef3b2100-cd10-4629-b1f3-1fe7fae32510" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/checkGood.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/deleteGood.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/editGood.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/usersOperations/addUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/usersOperations/updateUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add-new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addGood.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/check-new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/checkUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/deleteUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit-new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/editUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/addGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addGood.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/deleteGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/deleteGood.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/editGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/editGood.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/update-new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/updateGood.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/usersOperations/addUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/addUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/usersOperations/checkUser.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/usersOperations/deleteUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/deleteUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/usersOperations/editUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/editUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/usersOperations/updateUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/updateUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/database/slider/Ліжка/test1/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/database/slider/Прямі дивани/test2/1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/include/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/function.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/add-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/add-user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +37,9 @@
     </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="2gCWMccPamkfPOGwNylDLbRof3O" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -76,7 +76,9 @@
       <workItem from="1715313513723" duration="7443000" />
       <workItem from="1715391103723" duration="10781000" />
       <workItem from="1715404235648" duration="554000" />
-      <workItem from="1715404802729" duration="2071000" />
+      <workItem from="1715404802729" duration="2522000" />
+      <workItem from="1715479155735" duration="11519000" />
+      <workItem from="1715647749592" duration="9499000" />
     </task>
     <task id="LOCAL-00001" summary="responsive adaptation of the main page (part 2)">
       <created>1715234928654</created>
@@ -92,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715321998073</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="modified css styles;&#10;admin-panel add/edit/delete users (part1)">
+      <created>1715407046895</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715407046895</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +122,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="responsive adaptation of the main page (part 2)" />
     <MESSAGE value="responsive adaptation of header (part 1)" />
-    <option name="LAST_COMMIT_MESSAGE" value="responsive adaptation of header (part 1)" />
+    <MESSAGE value="modified css styles;&#10;admin-panel add/edit/delete users (part1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified css styles;&#10;admin-panel add/edit/delete users (part1)" />
   </component>
 </project>

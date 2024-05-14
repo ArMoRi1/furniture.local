@@ -72,15 +72,15 @@ function delete_folder($dir) {
     </style>
 </head>
 <body class="admin">
-<div class="container">
+<div class="container-delete container">
     <h2 class="delete_title">Ви впевнені, що хочете видалити наступну новину?</h2>
     <div class="card">
         <div class="card-body">
             <h5 class="card-title"><?=$post['name']?></h5>
-            <p class="card-karkass">
+            <div class="card-karkass">
                 <img src="../<?= $post['img1']?>" alt="...">
-            </p>
-            <p class="card-text"><?=$post['content']?></p>
+            </div>
+
             <form method="POST" action="">
                 <input type="hidden" name="post_id" value="<?=$post_id?>">
                 <button type="submit" class="btn btn-danger">Видалити</button>

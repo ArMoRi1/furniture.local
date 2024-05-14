@@ -160,14 +160,14 @@ if (!$conn) {
                         <?php
                         $sql = "SELECT * FROM users";
                         $result = mysqli_query($conn, $sql);
-                        foreach ($result as $post):
+                        foreach ($result as $user):
                             ?>
                             <tbody>
                             <tr>
-                                <th scope="row"><?=$post['id']?></th>
-                                <td><?=$post['email']?></td>
-                                <td><a href="./usersOperations/editUser.php?post_id=<?=$post['id']?>" class="btn btn-secondary">Редагувати</a></td>
-                                <td><a href="./usersOperations/deleteUser.php?post_id=<?=$post['id'];?>" class="btn btn-danger">Видалити</a></td>
+                                <th scope="row"><?=$user['id']?></th>
+                                <td><?=$user['email']?></td>
+                                <td><a href="./usersOperations/editUser.php?user_id=<?=$user['id']?>" class="btn btn-secondary">Редагувати</a></td>
+                                <td><a href="./usersOperations/deleteUser.php?user_id=<?=$user['id'];?>" class="btn btn-danger">Видалити</a></td>
                             </tr>
                             </tbody>
                         <?php endforeach;?>

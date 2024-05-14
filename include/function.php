@@ -125,7 +125,7 @@ function GetRoleUsingEmail($email) {
     // Перевірка на помилку підготовленого запиту
     if ($stmt) {
         // Прив'язка параметру та встановлення значення
-        mysqli_stmt_bind_param($stmt, "i", $email);
+        mysqli_stmt_bind_param($stmt, "s", $email);
 
         // Виконання запиту
         mysqli_stmt_execute($stmt);

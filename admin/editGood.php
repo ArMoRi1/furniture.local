@@ -36,7 +36,6 @@ if (!$conn) {
 </head>
 <body>
 <div class="container">
-
         <div class="col-12">
             <?php
             $furniture_id = $_GET['post_id'];

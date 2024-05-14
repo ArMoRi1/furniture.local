@@ -73,8 +73,9 @@ include ("include/function.php");
                                 <div id="myDropdown" class="dropdown-content">
                                     <a class="username" href="userProfile.php"><i class="fa-regular fa-user"><span><?php echo $_SESSION['user'];?></span></i></a>
                                             <?php
-                                            if('1' === GetRoleUsingEmail($_SESSION['email'])){
+                                            if(1 == GetRoleUsingEmail($_SESSION['email'])){
                                                echo  '<a class="useradmin" href="admin/index.php"><i class="fa-solid fa-lock"><span>Адмін-панель</span></i></a>';
+
                                             }
                                             ?>
 <!--                                    <a class="useradmin" href="#"><i class="fa-solid fa-lock"><span>Адмін-панель</span></i></a>-->

@@ -1957,9 +1957,27 @@ orderForm select{
     width: 200px;
 
 }
+.admin .container-delete{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+}
+.delete_title{
+text-align: center;
+}
+.card{
+    max-width: 400px;
 
+}
+.card-body{
+
+}
+.card-karkass{
+
+}
 .card-karkass img {
-    max-width: 100%;
+    width: 100%;
 }
 
 /*---------thx-------------*/
@@ -2180,10 +2198,14 @@ orderForm select{
 .editProfile-button:hover{
     color:grey;
 }
-
+@media (min-width: 1001px){
+    h2{
+        font-size: 28px!important;
+    }
+}
 @media (max-width: 1000px){
-    h1{
-
+    h2{
+        font-size: 25px!important;
     }
     p{
         font-size: 20px!important;

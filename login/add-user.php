@@ -10,12 +10,19 @@ session_start();
     if (!$conn) {
         die("Connection failed:" . mysqli_connect_error());
     }
-
     $usersurname = stripslashes(htmlspecialchars(trim($_POST['usersurname'])));
     $username = stripslashes(htmlspecialchars(trim($_POST['username'])));
     $email = stripslashes(htmlspecialchars(trim($_POST['email'])));
     $password = stripslashes(htmlspecialchars(trim($_POST['password'])));
+    $avatar = "../img/database/usersAvatars/userImg-basic.png";
 
+    if(empty($_POST['rolee'])){
+        $rolee= '1';
+
+    }else{
+        $rolee = $_POST['rolee'];
+
+    }
     if(mb_strlen($username, "UTF-8") < 2){
         $messageOnPage = "Недопустима довжина прізвища!";
     }
@@ -33,6 +40,7 @@ session_start();
     }
 
     $password = md5($password . "kjs2gfs9kd7g");
+
     $mysql = new mysqli($servername,$usernameDB,$passwordDB,$db);
 
     $check_query = "SELECT * FROM users WHERE email = '$email'";
@@ -40,7 +48,7 @@ session_start();
 if ($result->num_rows > 0) {
     $messageOnPage = "Користувач з такою електронною адресою вже існує.";
 } else {
-    $insert_query = $mysql->query("INSERT INTO `users` (`usersurname`, `username`, `email`, `password`, `rolee`) VALUES ('$usersurname', '$username', '$email', '$password', 'user')");
+    $insert_query = $mysql->query("INSERT INTO `users` (`usersurname`, `username`, `email`, `password`, `rolee`, `avatar`) VALUES ('$usersurname', '$username', '$email', '$password', '$rolee', '$avatar')");
     if (($insert_query) === TRUE) {
         header('Location: ../login/login.php');
     } else {
@@ -51,9 +59,19 @@ if ($result->num_rows > 0) {
 //echo $messageOnPage;
 $mysql->close();
 $_SESSION['messageOnPage'] = $messageOnPage;
-if($_SESSION['messageOnPage'] === ''){
-    header('Location: ../login/login.php');
-}else{
-header('Location: ../login/registration.php');
+if(($_SESSION['messageOnPage'] === '') && ($_SESSION['rolee']) == 1){
+    header('Location: ../admin/index.php');
+} elseif (($_SESSION['messageOnPage'] === '') && (!$_SESSION['rolee'])){
+        header('Location: ../login/login.php');
+} else{
+    header('Location: ../login/registration.php');
 }
+
+//if(($_SESSION['messageOnPage'] === '') && (!empty($_SESSION))) {
+////    header('Location: ../login/login.php');
+//    header('Location: ../admin/index.php');
+////}else if(($_SESSION['messageOnPage'] === '') && (empty($_SESSION)){
+////        header('Location: ../login/registration.php');
+////} else{
+//}
 ?>
