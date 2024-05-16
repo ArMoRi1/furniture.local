@@ -1,9 +1,7 @@
 <?php
     include('header.php');
 ?>
-    <style>
 
-    </style>
 <div class="userProfile-wrapper">
     <div class="userProfile-container  container">
         <div class="userProfile-body">
@@ -44,17 +42,18 @@
                         <thead>
                         <tr>
                             <th>ID замовлення</th>
-                            <th>Номер телефону</th>
+<!--                            <th>Номер телефону</th>-->
 <!--                            <th>Email</th>-->
                             <th>Адреса відправки</th>
                             <th>Номер товару</th>
-                            <th>Ціна(грн)</th>
+<!--                            <th>Ціна(грн)</th>-->
                             <th>Дата</th>
                             <th>Статус</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php
+                        global $conn;
 //                        $sql = "SELECT * FROM orders WHERE email='" . mysqli_real_escape_string($conn, $_SESSION['email']) . "'";
                         $sql = "SELECT orders.*, furniture.price 
                                 FROM orders 
@@ -65,12 +64,12 @@
                         foreach($result as $order):
                         ?>
                         <tr>
-                            <td><?=$order['id']?></td>
-                            <td><?=$order['phonenumber']?></td>
+                            <td><a href="orderInfo.php?order_id=<?= $order['id']?>""><?=$order['id']?></a></td>
+<!--                            <td>--><?//=$order['phonenumber']?><!--</td>-->
 <!--                            <td>--><?//=$order['email']?><!--</td>-->
                             <td><?=$order['address']?></td>
                             <td><a href="furnitureInfo.php?furniture_id=<?= $order['productid']?>"><?=$order['productid']?></a></td>
-                            <td><?=$order['price']?></td>
+<!--                            <td>--><?//=$order['price']?><!--</td>-->
                             <td><?=$order['orderDate']?></td>
                             <?php
                                 if($order['status']==1) {

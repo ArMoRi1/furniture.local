@@ -24,7 +24,7 @@ $result = mysqli_query($conn, $sql);
 $user = mysqli_fetch_assoc($result);
 
 $filePath = $user['avatar'];
-$folderPath = '../'.dirname($filePath);
+$folderPath = '../../'.dirname($filePath);
 
 if (!$user) {
     // Якщо новина не знайдена, перенаправити на головну сторінку адмін-панелі
@@ -32,7 +32,7 @@ if (!$user) {
     exit();
 }
 
-
+var_dump($folderPath);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Видалення папки разом із файлами
     if (is_dir($folderPath)) {
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Видалення запису з бази даних
-    mysqli_query($conn, "DELETE FROM furniture WHERE id =".$_GET['user_id']);
+    mysqli_query($conn, "DELETE FROM users WHERE id =".$_GET['user_id']);
 
     // Перенаправлення на головну сторінку адмін-панелі
 //    header("Location: index.php");

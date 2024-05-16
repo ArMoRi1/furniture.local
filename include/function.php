@@ -265,4 +265,18 @@ function getIMGAvatarFromDatabase($filename, $id){
         return false; // Якщо немає результатів або помилка
     }
 }
-
+function getOrderById($orderId): array
+{
+    global $conn;
+    $sql = 'SELECT * FROM `orders` WHERE `id`='.$orderId;
+    $result = mysqli_query($conn, $sql);
+    return mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
+function getStatusName($status)
+{
+    global $conn;
+    $sql = 'SELECT * FROM `orderstatus` WHERE `id`='.$status;
+    $row = mysqli_query($conn, $sql);
+    $result = mysqli_fetch_all($row, MYSQLI_ASSOC);
+    return $result[0]['status'];
+}
