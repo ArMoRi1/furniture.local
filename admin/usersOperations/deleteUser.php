@@ -28,11 +28,11 @@ $folderPath = '../../'.dirname($filePath);
 
 if (!$user) {
     // Якщо новина не знайдена, перенаправити на головну сторінку адмін-панелі
-    header("Location: index.php");
+    header("Location:../index.php");
     exit();
 }
 
-var_dump($folderPath);
+//var_dump($folderPath);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Видалення папки разом із файлами
     if (is_dir($folderPath)) {
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_query($conn, "DELETE FROM users WHERE id =".$_GET['user_id']);
 
     // Перенаправлення на головну сторінку адмін-панелі
-//    header("Location: index.php");
+    header("Location: ../index.php");
     exit();
 }
 
@@ -92,7 +92,7 @@ function delete_folder($dir) {
             <form method="POST" action="">
                 <input type="hidden" name="post_id" value="<?=$_GET['user_id']?>">
                 <button type="submit" class="btn btn-danger">Видалити</button>
-                <a href="index.php" class="btn btn-secondary">Скасувати</a>
+                <a href="../index.php" class="btn btn-secondary">Скасувати</a>
             </form>
         </div>
     </div>

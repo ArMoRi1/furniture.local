@@ -4,9 +4,11 @@
     <list default="true" id="ef3b2100-cd10-4629-b1f3-1fe7fae32510" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/usersOperations/deleteUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/deleteUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/userProfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userProfileEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/userProfileEdit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/database/usersAvatars/52/52.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/database/usersAvatars/8/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/database/usersAvatars/8/8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/database/usersAvatars/userImg-basic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/orderInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userProfile/cancelGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/userProfile/cancelOrder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,9 @@
       <workItem from="1715816942544" duration="268000" />
       <workItem from="1715817220998" duration="159000" />
       <workItem from="1715818637980" duration="45000" />
-      <workItem from="1715819086101" duration="12602000" />
+      <workItem from="1715819086101" duration="12850000" />
+      <workItem from="1715880896868" duration="1121000" />
+      <workItem from="1715913638387" duration="5069000" />
     </task>
     <task id="LOCAL-00001" summary="responsive adaptation of the main page (part 2)">
       <created>1715234928654</created>
@@ -97,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715407046895</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="order actions (part 1)&#10;&#9;&#10;admin-panel add/edit/delete users (bug fixes)">
+      <created>1715835610191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715835610191</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +130,7 @@
     <MESSAGE value="responsive adaptation of the main page (part 2)" />
     <MESSAGE value="responsive adaptation of header (part 1)" />
     <MESSAGE value="modified css styles;&#10;admin-panel add/edit/delete users (part1)" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified css styles;&#10;admin-panel add/edit/delete users (part1)" />
+    <MESSAGE value="order actions (part 1)&#10;&#9;&#10;admin-panel add/edit/delete users (bug fixes)" />
+    <option name="LAST_COMMIT_MESSAGE" value="order actions (part 1)&#10;&#9;&#10;admin-panel add/edit/delete users (bug fixes)" />
   </component>
 </project>

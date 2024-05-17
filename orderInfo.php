@@ -3,7 +3,6 @@ include('header.php');
 $orderId = $_GET['order_id'];
 $order = getOrderById($orderId);
 $statusName = getStatusName($order[0]['status']);
-echo $statusName;
 ?>
 
 <style>
@@ -70,7 +69,7 @@ echo $statusName;
                         echo "<td style='background-color: #7FFFD4;'>";
                     }
                     if($orderStat['status']==2) {
-                        echo "<td style='background-color: #6082B6;'>Не";
+                        echo "<td style='background-color: #6082B6;'>";
                     }
                     if($orderStat['status']==3) {
                         echo "<td style='background-color: #7fff00;'>";
@@ -90,10 +89,16 @@ echo $statusName;
                     </tr>
                 </tbody>
             </table>
-            <?php endforeach;?>
-            <div class="btn-danger-box">
-                <a class="header__link userlogin btn btn-danger" href = "userProfile/cancelGood.php?order_id=<?= $orderId?>" type="button">Відмінити</a>
-            </div>
+            <?php
+                if($orderStat['status'] != 6):
+            ?>
+                <div class="btn-danger-box">
+                    <a class="header__link userlogin btn btn-danger" href = "userProfile/cancelOrder.php?order_id=<?= $orderId?>" type="button">Відмінити</a>
+                </div>
+            <?php
+                endif;
+                endforeach;
+            ?>
         </div>
     </div>
 </div>
