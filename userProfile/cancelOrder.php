@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form method="POST" action="">
                 <h2 class="delete_title">Ви впевнені, що хочете відмінити замволення?</h2>
                 <input type="hidden" name="post_id" value="<?=$orderId?>">
-                <button type="submit" class="btn btn-danger">Відмінити</button>
+                <button type ="submit" class="btn btn-danger">Відмінити</button>
                 <a href="../userProfile.php" class="btn btn-secondary">Скасувати</a>
             </form>
         </div>
