@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ef3b2100-cd10-4629-b1f3-1fe7fae32510" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/orderForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userProfile/cancelOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/userProfile/cancelOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/usersOperations/editUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/editUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/database/usersAvatars/8/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/database/usersAvatars/8/8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/function.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/makingorder.php" beforeDir="false" afterPath="$PROJECT_DIR$/makingorder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +29,9 @@
     </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="2gCWMccPamkfPOGwNylDLbRof3O" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,13 +41,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../smart_garbage" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\#my-projects\furniture.local\admin" />
       <recent name="C:\xampp\htdocs\#my-projects\furniture.local" />
       <recent name="C:\xampp\htdocs\#my-projects\furniture.local\admin\usersOperarions" />
     </key>
@@ -74,7 +81,8 @@
       <workItem from="1715818637980" duration="45000" />
       <workItem from="1715819086101" duration="12850000" />
       <workItem from="1715880896868" duration="1121000" />
-      <workItem from="1715913638387" duration="7909000" />
+      <workItem from="1715913638387" duration="8676000" />
+      <workItem from="1716156868685" duration="10895000" />
     </task>
     <task id="LOCAL-00001" summary="responsive adaptation of the main page (part 2)">
       <created>1715234928654</created>
@@ -111,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715918940143</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="order action (part 3)">
+      <created>1715922419737</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715922419737</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +150,7 @@
     <MESSAGE value="modified css styles;&#10;admin-panel add/edit/delete users (part1)" />
     <MESSAGE value="order actions (part 1)&#10;&#9;&#10;admin-panel add/edit/delete users (bug fixes)" />
     <MESSAGE value="order action (part 2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="order action (part 2)" />
+    <MESSAGE value="order action (part 3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="order action (part 3)" />
   </component>
 </project>

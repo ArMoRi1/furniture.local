@@ -60,15 +60,10 @@ if (!$conn) {
                 <input name="username" type="text" class="form-control"
                        id="exampleFormControlInput1" required value="<?php echo $user['username'];?>">
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Вкажіть Email<span style="color:red;">*</span></label>
-                <input name="email" type="email" class="form-control"
-                       id="exampleFormControlInput1" required value="<?php echo $user['email'];?>">
-            </div>
 <!--            <div class="form-group">-->
-<!--                <label for="exampleFormControlInput1">Вкажіть пароль<span style="color:red;">*</span></label>-->
-<!--                <input name="password" type="text" class="form-control"-->
-<!--                       id="exampleFormControlInput1" required value="--><?php //echo $user['password'];?><!--">-->
+<!--                <label for="exampleFormControlInput1">Вкажіть Email<span style="color:red;">*</span></label>-->
+<!--                <input name="email" type="email" class="form-control"-->
+<!--                       id="exampleFormControlInput1" required value="--><?php //echo $user['email'];?><!--">-->
 <!--            </div>-->
             <div class="form-group">
                 <label for="exampleFormControlInput1">Вкажіть роль<span style="color:red;">*</span></label>

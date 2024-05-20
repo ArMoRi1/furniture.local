@@ -111,6 +111,7 @@ if (!$conn) {
             <div class="tabs__triggers">
                 <a href="#tab-goods" class ="tabs__triggers__item">Товари</a>
                 <a href="#tab-users" class ="tabs__triggers__item">Користувачі</a>
+                <a href="#tab-orders" class ="tabs__triggers__item">Замовлення</a>
             </div>
             <div class="tabs__content">
                 <div id="tab-goods" class="tabs__content__item tabs__content__item--active col">
@@ -132,9 +133,8 @@ if (!$conn) {
                         $result = mysqli_query($conn, $sql);
                         foreach ($result as $post):
                             ?>
-
                             <tr>
-                                <th scope="row"><?=$post['id']?></th>
+                                <th scope="row"><a href="../furnitureInfo.php?furniture_id=<?=$post['id']?>"><?=$post['id']?></a></th>
                                 <td><?=$post['name']?></td>
                                 <td><a href="editGood.php?post_id=<?=$post['id']?>" class="btn btn-secondary">Редагувати</a></td>
                                 <td><a href="deleteGood.php?post_id=<?=$post['id'];?>" class="btn btn-danger">Видалити</a></td>
@@ -168,6 +168,35 @@ if (!$conn) {
                                 <td><?=$user['email']?></td>
                                 <td><a href="./usersOperations/editUser.php?user_id=<?=$user['id']?>" class="btn btn-secondary">Редагувати</a></td>
                                 <td><a href="./usersOperations/deleteUser.php?user_id=<?=$user['id'];?>" class="btn btn-danger">Видалити</a></td>
+                            </tr>
+                            </tbody>
+                        <?php endforeach;?>
+                    </table>
+                </div>
+                <div id="tab-orders" class="tabs__content__item col">
+<!--                    <div>-->
+<!--                        <a href="./ordersOperations/addOrder.php" class="btn btn-success">Додати замовлення</a>-->
+<!--                    </div>-->
+                    <table class="table">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">№</th>
+                            <th scope="col">Замовник</th>
+                            <th scope="col">Редагування</th>
+                            <th scope="col">Видалення</th>
+                        </tr>
+                        </thead>
+                        <?php
+                        $sql = "SELECT * FROM orders";
+                        $result = mysqli_query($conn, $sql);
+                        foreach ($result as $order):
+                            ?>
+                            <tbody>
+                            <tr>
+                                <th scope="row"><a href="../orderInfo.php?order_id=<?=$order['id']?>"><?=$order['id']?></a></th>
+                                <td><?=$order['email']?></td>
+                                <td><a href="./ordersOperations/editOrder.php?order_id=<?=$order['id']?>" class="btn btn-secondary">Редагувати</a></td>
+                                <td><a href="./ordersOperations/deleteOrder.php?order_id=<?=$order['id'];?>" class="btn btn-danger">Видалити</a></td>
                             </tr>
                             </tbody>
                         <?php endforeach;?>

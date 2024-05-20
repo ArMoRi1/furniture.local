@@ -23,7 +23,7 @@ $furniture_id = $_GET['furniture_id'];
                         <input placeholder="Номер телефону" type="text" id="phonenumber" name="phonenumber" required><br><br>
                     </div>
                     <div class="order-info__item">
-                        <input value="<?php if(!empty($_SESSION)):echo $_SESSION['email'];endif;?>" placeholder="Email" type="email" id="email" name="email" required><br><br>
+                        <input  value="<?php if(!empty($_SESSION)):echo $_SESSION['email'];endif;?>" placeholder="Email" type="email" id="email" name="email" required readonly><br><br>
                     </div>
                     <div class="order-info__item">
                         <input placeholder="Адреса проживання" type="text" id="address" name="address" required><br><br>

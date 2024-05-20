@@ -280,3 +280,9 @@ function getStatusName($status)
     $result = mysqli_fetch_all($row, MYSQLI_ASSOC);
     return $result[0]['status'];
 }
+function getStatuses(){
+    global $conn;
+    $sql = 'SELECT * FROM `orderstatus`';
+    $result = mysqli_query($conn, $sql);
+    return mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
