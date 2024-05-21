@@ -3,11 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="ef3b2100-cd10-4629-b1f3-1fe7fae32510" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/addGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addGood.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/deleteGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/deleteGood.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/editGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/editGood.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/usersOperations/addUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/addUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/usersOperations/deleteUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/deleteUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/usersOperations/editUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersOperations/editUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/database/usersAvatars/8/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/database/usersAvatars/8/8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/makingorder.php" beforeDir="false" afterPath="$PROJECT_DIR$/makingorder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/furnituredb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/furnituredb.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/add-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/add-user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/check-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/check-user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +60,7 @@
       <recent name="C:\xampp\htdocs\#my-projects\furniture.local\admin\usersOperarions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\#my-projects\furniture.local" />
       <recent name="C:\xampp\htdocs\#my-projects\furniture.local\userProfile" />
       <recent name="C:\xampp\htdocs\#my-projects\furniture.local\admin" />
       <recent name="C:\xampp\htdocs\#my-projects\furniture.local\admin\GoodsOperations" />
@@ -82,7 +90,8 @@
       <workItem from="1715819086101" duration="12850000" />
       <workItem from="1715880896868" duration="1121000" />
       <workItem from="1715913638387" duration="8676000" />
-      <workItem from="1716156868685" duration="10895000" />
+      <workItem from="1716156868685" duration="11027000" />
+      <workItem from="1716247997044" duration="13283000" />
     </task>
     <task id="LOCAL-00001" summary="responsive adaptation of the main page (part 2)">
       <created>1715234928654</created>
@@ -126,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715922419737</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="admin-panel edit/delete orders&#10;buggs fixes">
+      <created>1716174596655</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716174596655</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +167,7 @@
     <MESSAGE value="order actions (part 1)&#10;&#9;&#10;admin-panel add/edit/delete users (bug fixes)" />
     <MESSAGE value="order action (part 2)" />
     <MESSAGE value="order action (part 3)" />
-    <option name="LAST_COMMIT_MESSAGE" value="order action (part 3)" />
+    <MESSAGE value="admin-panel edit/delete orders&#10;buggs fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin-panel edit/delete orders&#10;buggs fixes" />
   </component>
 </project>

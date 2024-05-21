@@ -17,7 +17,7 @@ session_start();
     $avatar = "../img/database/usersAvatars/userImg-basic.png";
 
     if(empty($_POST['rolee'])){
-        $rolee= '1';
+        $rolee= '6';
 
     }else{
         $rolee = $_POST['rolee'];
@@ -49,9 +49,7 @@ if ($result->num_rows > 0) {
     $messageOnPage = "Користувач з такою електронною адресою вже існує.";
 } else {
     $insert_query = $mysql->query("INSERT INTO `users` (`usersurname`, `username`, `email`, `password`, `rolee`, `avatar`) VALUES ('$usersurname', '$username', '$email', '$password', '$rolee', '$avatar')");
-    if (($insert_query) === TRUE) {
-        header('Location: ../login/login.php');
-    } else {
+    if (!$insert_query === TRUE) {
         $messageOnPage = "Помилка створення користувача!";
     }
 }
@@ -62,7 +60,7 @@ $_SESSION['messageOnPage'] = $messageOnPage;
 if(($_SESSION['messageOnPage'] === '') && ($_SESSION['rolee']) == 1){
     header('Location: ../admin/index.php');
 } elseif (($_SESSION['messageOnPage'] === '') && (!$_SESSION['rolee'])){
-        header('Location: ../login/login.php');
+    header('Location: ../login/login.php');
 } else{
     header('Location: ../login/registration.php');
 }

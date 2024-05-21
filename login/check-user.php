@@ -29,7 +29,7 @@ $_SESSION['usersurname'] = $user['usersurname'];
 $_SESSION['username'] = $user['username'];
 $_SESSION['user'] = $user['usersurname']." ".$user['username'];
 $_SESSION['email'] = $user['email'];
-
+$_SESSION['rolee'] = $user['rolee'];
 //var_dump($_SESSION);
 //echo $_SESSION['email'];
 //$_SESSION['expire_time'] = time() + 3600;

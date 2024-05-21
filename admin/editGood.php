@@ -3,7 +3,9 @@ session_start();
 include('../include/config.php');
 include('../include/function.php');
 
-if('1' !== GetRoleUsingEmail($_SESSION['email'])){
+$rolee = GetRoleUsingEmail($_SESSION['email']);
+
+if('6' == $rolee){
     header('location: ../login/login.php');
 }
 $servername = "localhost";

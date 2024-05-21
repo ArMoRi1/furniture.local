@@ -1,7 +1,8 @@
 <?php
 session_start();
-include('../include/config.php');
-include('../include/function.php');
+include('../../include/config.php');
+include('../../include/function.php');
+
 $rolee = GetRoleUsingEmail($_SESSION['email']);
 
 if('6' == $rolee){
@@ -16,48 +17,28 @@ $conn = mysqli_connect($servername, $username, $password, $db);
 if (!$conn) {
     die("Connection failed:" . mysqli_connect_error());
 }
-$post_id = $_GET['post_id'];
+
+//$post_id = $_GET['post_id'];
 
 // Отримати інформацію про новину, щоб показати перед підтвердженням видалення
-$sql = "SELECT * FROM furniture WHERE id =" . $post_id;
+$sql = "SELECT * FROM orders WHERE id =" . $_GET['order_id'];
 $result = mysqli_query($conn, $sql);
-$post = mysqli_fetch_assoc($result);
+$order = mysqli_fetch_assoc($result);
 
-$filePath = $post['img1'];
-$folderPath = '../'.dirname($filePath);
-
-if (!$post) {
+if (!$order) {
     // Якщо новина не знайдена, перенаправити на головну сторінку адмін-панелі
-    header("Location: index.php");
+    header("Location:../index.php");
     exit();
 }
 
-
+//var_dump($folderPath);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Видалення папки разом із файлами
-    if (is_dir($folderPath)) {
-        delete_folder($folderPath);
-    }
-
     // Видалення запису з бази даних
-    mysqli_query($conn, "DELETE FROM furniture WHERE id = $post_id");
+    mysqli_query($conn, "DELETE FROM orders WHERE id =".$_GET['order_id']);
 
     // Перенаправлення на головну сторінку адмін-панелі
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit();
-}
-
-// Функція для рекурсивного видалення папки разом із файлами
-function delete_folder($dir) {
-    $files = glob($dir . '/*');
-    foreach ($files as $file) {
-        if (is_file($file)) {
-            unlink($file);
-        } elseif (is_dir($file)) {
-            delete_folder($file);
-        }
-    }
-    rmdir($dir);
 }
 ?>
 
@@ -69,7 +50,7 @@ function delete_folder($dir) {
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Підтвердження видалення</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../../css/main.css">
     <style>
         body{
             font-family: Verdana, Arial, Helvetica, Sans-Serif;
@@ -80,19 +61,17 @@ function delete_folder($dir) {
     </style>
 </head>
 <body class="admin">
-<div class="container-delete container">
-    <h2 class="delete_title">Ви впевнені, що хочете видалити наступну новину?</h2>
+<div class="container-delete container ">
+    <h2 class="delete_title">Ви впевнені, що хочете видалити  наступне замовлення?</h2>
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title"><?=$post['name']?></h5>
-            <div class="card-karkass">
-                <img src="../<?= $post['img1']?>" alt="...">
-            </div>
-
+            <p class="card-title"><b>Замовлення</b> #<?= $order['id']?></p>
+            <p class="card-karkass"><b>Номер товару :</b> <?=$order['productid']?> </p>
+            <p class="card-text"><b>Email замовника:</b><br><?=$order['email']?></p>
             <form method="POST" action="">
-                <input type="hidden" name="post_id" value="<?=$post_id?>">
+                <input type="hidden" name="post_id" value="<?=$_GET['order_id']?>">
                 <button type="submit" class="btn btn-danger">Видалити</button>
-                <a href="index.php" class="btn btn-secondary">Скасувати</a>
+                <a href="../index.php" class="btn btn-secondary">Скасувати</a>
             </form>
         </div>
     </div>

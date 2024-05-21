@@ -2,6 +2,7 @@
 session_start();
 include('../../include/config.php');
 include('../../include/function.php');
+
 $rolee = GetRoleUsingEmail($_SESSION['email']);
 
 if('6' == $rolee){
@@ -32,9 +33,9 @@ if('6' == $rolee){
 <div class="container">
     <div class="col-12">
 
-        <form action="../../login/add-user.php" method="post" enctype="multipart/form-data" style="text-align: left">
+        <form action="checkOrder.php" method="post" enctype="multipart/form-data" style="text-align: left">
             <div class="col">
-                <h3>Додати Користувача</h3>
+                <h3>Додати Замовлення</h3>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Вкажіть прізвище<span style="color:red;">*</span></label>
@@ -71,7 +72,7 @@ if('6' == $rolee){
 
             </div>
             <button type="submit" class="btn btn-primary">Додати товар</button>
-            <a href="../../admin/index.php" class="btn btn-secondary">Скасувати</a>
+            <a href="../index.php" class="btn btn-secondary">Скасувати</a>
         </form>
     </div>
 </div>
