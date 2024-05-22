@@ -123,15 +123,43 @@ if (!$conn) {
             <div class="form-group">
                 <label for="exampleFormControlInput1">Статус замовлення<span style="color:red;">*</span></label>
                 <select name="status" type="text" class="form-control" id="exampleFormControlInput1" required>
-                    <option value disabled selected hidden>Виберіть статус</option>
                     <?php
-
                     $statuses = getStatuses();
-                    foreach($statuses as $status):?>
-                        <option <?php if($order['status'] === $status['id']):?> selected <?php endif;?>
+                    ?>
+                    <?php foreach($statuses as $status):?>
+                    <?php if($rolee == 2):?>
+                        <?php if(($status['id'] == 3) || ($status['id'] == 6) || ($status['id'] == 2)):?>
+                        <option <?php if($order['status'] === $status['id']):?> readonly selected hidden<?php endif;?>
                                 value="<?php echo $status['id']; ?>"><?php echo $status['status']; ?></option>
 
-                    <?php endforeach;?>
+                            <?php
+                        endif;
+                    endif;?>
+                        <?php if($rolee == 3):?>
+                            <?php if(($status['id'] == 4) || ($status['id'] == 6) || ($status['id'] == 3)):?>
+                                <option <?php if($order['status'] === $status['id']):?> readonly selected hidden<?php endif;?>
+                                        value="<?php echo $status['id']; ?>"><?php echo $status['status']; ?></option>
+
+                            <?php
+                            endif;
+                        endif;?>
+                        <?php if($rolee == 4):?>
+                            <?php if(($status['id'] == 5) || ($status['id'] == 6) || ($status['id'] == 4)):?>
+                                <option <?php if($order['status'] === $status['id']):?> readonly selected hidden<?php endif;?>
+                                        value="<?php echo $status['id']; ?>"><?php echo $status['status']; ?></option>
+
+                            <?php
+                            endif;
+                        endif;?>
+                    <?php if($rolee == 5):?>
+                    <?php if(($status['id'] == 5)):?>
+                    <option <?php if($order['status'] === $status['id']):?> readonly selected hidden<?php endif;?>
+                            value="<?php echo $status['id']; ?>"><?php echo $status['status']; ?></option>
+
+                    <?php
+                    endif;
+                    endif;
+                    endforeach;?>
                 </select>
 
             </div>

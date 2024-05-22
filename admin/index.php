@@ -147,10 +147,6 @@ if (!$conn) {
                         }
 
                         $result = mysqli_query($conn, $sql);
-
-
-
-
                         foreach ($result as $order):
                             ?>
                             <tbody>

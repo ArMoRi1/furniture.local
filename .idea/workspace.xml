@@ -3,15 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ef3b2100-cd10-4629-b1f3-1fe7fae32510" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/addGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addGood.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/checkGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/checkGood.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/editGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/editGood.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/ordersOperations/editOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/ordersOperations/editOrder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/updateGood.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/updateGood.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/orderInfo.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +83,8 @@
       <workItem from="1716156868685" duration="11027000" />
       <workItem from="1716247997044" duration="13353000" />
       <workItem from="1716347132367" duration="618000" />
-      <workItem from="1716348652137" duration="8775000" />
+      <workItem from="1716348652137" duration="8909000" />
+      <workItem from="1716404769818" duration="4251000" />
     </task>
     <task id="LOCAL-00001" summary="responsive adaptation of the main page (part 2)">
       <created>1715234928654</created>
@@ -148,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716263418785</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="changed the display of tables for different roles(part 2)&#10;&#10;bugs fixes">
+      <created>1716358765005</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716358765005</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +176,7 @@
     <MESSAGE value="order action (part 3)" />
     <MESSAGE value="admin-panel edit/delete orders&#10;buggs fixes" />
     <MESSAGE value="fixed JS problems&#10;fixed DB problems&#10;changed the display of tables for different roles(part 1)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed JS problems&#10;fixed DB problems&#10;changed the display of tables for different roles(part 1)" />
+    <MESSAGE value="changed the display of tables for different roles(part 2)&#10;&#10;bugs fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the display of tables for different roles(part 2)&#10;&#10;bugs fixes" />
   </component>
 </project>
