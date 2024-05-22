@@ -62,11 +62,23 @@ if('6' == $rolee){
                 <label for="exampleFormControlInput1">Виберіть відео</label>
                 <input name="video" type="file"
                        id="exampleFormControlInput1" >
-            <div class="form-group">
+            <div class="form-group" >
                 <label for="exampleFormControlInput1">Вкажіть розміри<span style="color:red;">*</span></label>
-                <input name="size" type="text" class="form-control"
+
+                <div style="display: flex">
+                    <input name="size1" type="number" class="form-control"
                        id="exampleFormControlInput1" required>
+                    <span style="display: flex; align-items: center" ><pre style="margin: 0;"> × </pre></span>
+                    <input name="size2" type="number" class="form-control"
+                           id="exampleFormControlInput1" required>
+                    <span style="display: flex; align-items: center" ><pre style="margin: 0;"> × </pre></span>
+                    <input name="size3" type="number" class="form-control"
+                           id="exampleFormControlInput1" required>
+                    <span style="display: flex; align-items: center" ><pre style="margin: 0;"> см </pre></span>
+
+                </div>
             </div>
+
             <div class="form-group">
                 <label for="exampleFormControlInput1">Вкажіть матеріал(и) каркасу<span style="color:red;">*</span></label>
                 <input name="karkass" type="text" class="form-control"
@@ -83,13 +95,20 @@ if('6' == $rolee){
                        id="exampleFormControlInput1" required>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Вкажіть номер категорії<span style="color:red;">*</span></label>
-                <input name="category" type="text" class="form-control"
-                       id="exampleFormControlInput1" required>
+                <label for="exampleFormControlInput1">Вкажіть тип меблів<span style="color:red;">*</span></label>
+                <div class="form-group">
+                    <select name="category" type="text" class="form-control" id="exampleFormControlFile1" required>
+                        <option value disabled selected hidden>Виберіть тип меблів</option>
+                        <?php
+                        $categories = get_categories();
+                        foreach($categories as $category):?>
+                            <option value="<?php echo $category['id']; ?>"><?php echo $category['categoryName']; ?></option>
+                        <?php endforeach;?>
+                    </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Вкажіть кількість</span></label>
-                <input name="numberOfGood" type="text" class="form-control"
+                <input name="numberOfGood" type="number" min="0" max="100" step="1" class="form-control"
                        id="exampleFormControlInput1">
             </div>
             <div class="form-group">
@@ -99,7 +118,7 @@ if('6' == $rolee){
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Вкажіть ціну меблів<span style="color:red;">*</span></label>
-                <input name="price" type="text" class="form-control"
+                <input name="price" type="number" min="0" step="500" class="form-control"
                        id="exampleFormControlInput1" required>
             </div>
 

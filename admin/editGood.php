@@ -76,8 +76,24 @@ if (!$conn) {
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Змінити розмір для меблів</label>
-                    <input name="size" type="text" class="form-control" id="exampleFormControlFile1"
-                           value="<?=$post['size']?>" required>
+                    <div class="form-group" >
+                        <label for="exampleFormControlInput1">Вкажіть розміри<span style="color:red;">*</span></label>
+                        <?php
+                            $parts =explode(" × ", $post['size']);
+
+                        ?>
+                        <div style="display: flex">
+                            <input name="size1" type="number" class="form-control"
+                                   id="exampleFormControlInput1" required value="<?= $parts[0]?>">
+                            <span style="display: flex; align-items: center" ><pre style="margin: 0;"> × </pre></span>
+                            <input name="size2" type="number" class="form-control"
+                                   id="exampleFormControlInput1" required value="<?= $parts[1]?>">
+                            <span style="display: flex; align-items: center" ><pre style="margin: 0;"> × </pre></span>
+                            <input name="size3" type="number" class="form-control"
+                                   id="exampleFormControlInput1" required value="<?= $parts[2]?>">
+                            <span style="display: flex; align-items: center" ><pre style="margin: 0;"> см </pre></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Змінити каркас меблів</label>
@@ -96,8 +112,19 @@ if (!$conn) {
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Змінити тип меблів</label>
-                    <input name="category" type="text" class="form-control" id="exampleFormControlFile1"
-                           value="<?=$post['category']?>" required>
+                    <select name="category" type="text" class="form-control" id="exampleFormControlFile1"
+                            value="<?=$post['category']?>" required>
+                        <option value disabled selected hidden>Виберіть тип меблів</option>
+                        <?php
+
+                        $categories = get_categories();
+
+                        foreach($categories as $category):?>
+                            <option <?php if($post['category'] === $category['id']):?> selected <?php endif;?>
+                                    value="<?php echo $category['id']; ?>"><?php echo $category['categoryName']; ?></option>
+
+                        <?php endforeach;?>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Вкажіть кількість</label>

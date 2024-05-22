@@ -19,8 +19,13 @@ function get_rolees(){
     global $conn;
     $sql = 'SELECT * FROM rolee';
     $result = mysqli_query($conn, $sql);
-    $rolees = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    return $rolees;
+    return mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
+function get_categories(){
+    global $conn;
+    $sql = 'SELECT * FROM furniturecategory';
+    $result = mysqli_query($conn, $sql);
+    return mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 function get_furniture_for_plagins($table, $limit, $offset){
     global $conn;

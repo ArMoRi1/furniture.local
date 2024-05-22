@@ -169,13 +169,14 @@ function setupTabs() {
 
             item.classList.add('tabs-content__item--active');
             document.getElementById(id).classList.add('tabs-content__item--active');
-            document.querySelector('.tabs-triggers__item').click();
         })
     );
+    document.querySelector('.tabs-triggers__item').click();
 }
+document.addEventListener("DOMContentLoaded", setupTabs);
+
 
 function gearFunction() {
-    console.log("хуй");
     // Перемикання класу show для меню
     document.getElementById("myDropdown").classList.toggle("show");
 

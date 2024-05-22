@@ -56,7 +56,7 @@ $statusName = getStatusName($order[0]['status']);
                     </tr>
                     <tr>
                         <td>Номер товару</td>
-                        <td><?= $orderStat['productid'];?></td>
+                        <td><a href="furnitureInfo.php?furniture_id=<?= $orderStat['productid'];?>"><?= $orderStat['productid'];?></a></td>
                     </tr>
                     <tr>
                         <td>Дата Замовлення</td>

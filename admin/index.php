@@ -115,7 +115,7 @@ if (!$conn) {
         <div class="tabs-container">
             <div class="tabs__triggers">
                 <a href="#tab-orders" id="#tab-orders" class ="tabs__triggers__item">Замовлення</a>
-                <?php if($rolee == 1 || $rolee == 2):?>
+                <?php if($rolee == 1 || $rolee == 5):?>
                     <a href="#tab-goods"   class ="tabs__triggers__item">Товари</a>
                 <?php endif;?>
                 <?php if($rolee == 1):?>
@@ -134,8 +134,23 @@ if (!$conn) {
                         </tr>
                         </thead>
                         <?php
-                        $sql = "SELECT * FROM orders";
+                        if($rolee == 1){
+                            $sql = "SELECT * FROM orders";
+                        }elseif($rolee == 2){
+                            $sql = "SELECT * FROM orders WHERE status = 2";
+                        }elseif($rolee == 3){
+                            $sql = "SELECT * FROM orders WHERE status = 3";
+                        }elseif($rolee == 4){
+                            $sql = "SELECT * FROM orders WHERE status = 4";
+                        }elseif($rolee == 5){
+                            $sql = "SELECT * FROM orders WHERE status = 5";
+                        }
+
                         $result = mysqli_query($conn, $sql);
+
+
+
+
                         foreach ($result as $order):
                             ?>
                             <tbody>

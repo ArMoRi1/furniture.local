@@ -5,7 +5,7 @@ include('../include/function.php');
 $id = $_POST['id'];
 
 $name = mysqli_real_escape_string($conn, $_POST['name']);
-$size = mysqli_real_escape_string($conn, $_POST['size']);
+$size = mysqli_real_escape_string($conn, $_POST['size1']." × ".$_POST['size2']." × ".$_POST['size3']);
 $karkass = mysqli_real_escape_string($conn, $_POST['karkass']);
 $filling = mysqli_real_escape_string($conn, $_POST['filling']);
 $bedsquare = mysqli_real_escape_string($conn, $_POST['bedsquare']);

@@ -8,6 +8,16 @@ $rolee = GetRoleUsingEmail($_SESSION['email']);
 if('6' == $rolee){
     header('location: ../login/login.php');
 }
+
+if($rolee == 1){
+    $readOnly = "";
+} else{
+    $readOnly = "readonly";
+}
+$furnitures = get_furniture();
+$furnitures_category = get_furniture_by_category(1);
+
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -53,33 +63,61 @@ if (!$conn) {
                 <h3>Редагувати замовлення</h3>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Прізвище замовника<span style="color:red;">*</span></label>
-                <input  name="usersurname" type="text" class="form-control"
+                <label  for="exampleFormControlInput1">Прізвище замовника<span style="color:red;">*</span></label>
+                <input <?=$readOnly ?>  name="usersurname" type="text" class="form-control"
                        id="exampleFormControlInput1" required value="<?php echo $order['usersurname'];?>">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Ім'я замовника<span style="color:red;">*</span></label>
-                <input name="username" type="text" class="form-control"
+                <input <?=$readOnly ?> name="username" type="text" class="form-control"
                        id="exampleFormControlInput1" required value="<?php echo $order['username'];?>">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Email замовника<span style="color:red;">*</span></label>
-                <input disabled name="email" type="email" class="form-control"
-                       id="exampleFormControlInput1" required value="<?php echo $order['email'];?>">
-            </div>
+                    <input readonly name="email" type="email" class="form-control"
+                    id="exampleFormControlInput1" required value="<?php echo $order['email'];?>">
+
+            </div
             <div class="form-group">
                 <label for="exampleFormControlInput1">Адреса замовника<span style="color:red;">*</span></label>
-                <input name="address" type="text" class="form-control"
+                <input  name="address" type="text" class="form-control"
                        id="exampleFormControlInput1" required value="<?php echo $order['address'];?>">
             </div>
+
+
             <div class="form-group">
-                <label for="exampleFormControlInput1">Номер товару<span style="color:red;">*</span></label>
-                <input name="productid" type="text" class="form-control"
-                       id="exampleFormControlInput1" required value="<?php echo $order['productid'];?>">
+                <label for="exampleFormControlInput1">Товар<span style="color:red;">*</span></label>
+                <select name="productid" type="text" class="form-control"
+                        id="exampleFormControlInput1" required value="<?php echo $order['productid'];?>" >
+                    <?php if($_GET['x']):?>
+                        <option value disabled selected hidden>Виберіть товар</option>
+                    <?php endif;
+                    $furniture_id = $order['productid'];
+                    for($i = 1;$i<=3;$i++):?>
+                        <?php $furnitures_category = get_furniture_by_category($i);?>
+                        <optgroup label="
+                                <?php
+                        if($i==1){
+                            echo "Кутові дивани";
+                        } else if($i==2){
+                            echo "Прямий дивани";
+                        } else if($i==3){
+                            echo "Ліжка";
+                        }
+                        ?>">
+                            <?php foreach ($furnitures_category as $furniture):?>
+                                <option <?php if($furniture['id']===$furniture_id):?> selected <?php endif;?> value="<?php echo $furniture['id']?>"><?php echo $furniture['name']?></option>
+                            <?php endforeach;?>
+                        </optgroup>
+                    <?php endfor;?>
+                </select>
+
             </div>
+
+
             <div class="form-group">
                 <label for="exampleFormControlInput1">Дату замовлення<span style="color:red;">*</span></label>
-                <input name="orderDate" type="text" class="form-control"
+                <input <?=$readOnly ?> name="orderDate" type="text" class="form-control"
                        id="exampleFormControlInput1" required value="<?php echo $order['orderDate'];?>">
             </div>
             <div class="form-group">
